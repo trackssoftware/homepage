@@ -1,0 +1,61 @@
+
+
+<script>
+(function() {
+  const TARGET_SELECTOR = '#main-outlet';
+  const MAX_INTERVAL_TRIES = 30;
+
+  function findTarget() {
+    return document.querySelector(TARGET_SELECTOR)
+      || document.querySelector('#main-container')
+      || document.querySelector('.contents')
+      || document.body;
+  }
+
+  function moveElements() {
+    const target = findTarget();
+    if (!target) return false;
+
+    const searchBanner =
+      document.querySelector('.welcome-banner, .below-site-header-outlet.search-banner.welcome-banner');
+    const announcement = document.querySelector('.banner-box');
+
+    // remove stale copies
+    if (searchBanner && !target.contains(searchBanner)) {
+      target.insertBefore(searchBanner, target.firstElementChild);
+    }
+    if (announcement && !target.contains(announcement)) {
+      if (searchBanner && target.contains(searchBanner)) {
+        searchBanner.insertAdjacentElement('afterend', announcement);
+      } else {
+        target.insertBefore(announcement, target.firstElementChild);
+      }
+    }
+
+    return searchBanner || announcement;
+  }
+
+  // initial attempts
+  let tries = 0;
+  const interval = setInterval(() => {
+    tries++;
+    if (moveElements() || tries >= MAX_INTERVAL_TRIES) {
+      clearInterval(interval);
+    }
+  }, 200);
+
+  // observer for Ember rerenders
+  const observer = new MutationObserver(() => {
+    moveElements();
+  });
+  observer.observe(document.documentElement || document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  // SPA hooks
+  document.addEventListener('discourse:page-loaded', () => setTimeout(moveElements, 120));
+  document.addEventListener('DOMContentLoaded', () => setTimeout(moveElements, 120));
+})();
+</script>
+
