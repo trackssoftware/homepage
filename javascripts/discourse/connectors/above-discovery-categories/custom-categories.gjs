@@ -27,6 +27,11 @@
         >How Do I</a>
       </div>
       <div class="tracks-category-card">
+        <h4>Tracks Go!</h4>
+        <p>Guides and answers to help you get the most out of Tracks Go!</p>
+        <a href="/c/tracks-go/18" class="btn btn-primary">Tracks Go!</a>
+      </div>
+      <div class="tracks-category-card">
         <h4>Release Notes</h4>
         <p>Find out what was included in recent updates to the software.</p>
         <a id="release-btn" class="btn btn-primary" target="_blank">Release Notes</a>
