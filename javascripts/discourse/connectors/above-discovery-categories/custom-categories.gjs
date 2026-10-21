@@ -1,7 +1,7 @@
 <template>
   <div class="my-custom-categories">
     <div class="extra-category-list">
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>Tracks Desktop Help</h4>
         <p>A good place to start for answers about using the software.</p>
         <a
@@ -9,7 +9,7 @@
           class="btn btn-primary"
         >Tracks Desktop</a>
       </div>
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>Pocket Tracks Help</h4>
         <p>Dive into Pocket Tracks documentation. Enter the feature into the
           Search field to get started.</p>
@@ -18,7 +18,7 @@
           class="btn btn-primary"
         >Pocket Tracks</a>
       </div>
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>How Do I?</h4>
         <p>Get quick answers about common tasks in the software.</p>
         <a
@@ -26,12 +26,12 @@
           class="btn btn-primary"
         >How Do I</a>
       </div>
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>Release Notes</h4>
         <p>Find out what was included in recent updates to the software.</p>
         <a id="release-btn" class="btn btn-primary" target="_blank">Release Notes</a>
       </div>
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>Additional Resources</h4>
         <p>Videos, UX presentations, and documents shared by the community.</p>
         <a
@@ -39,7 +39,7 @@
           class="btn btn-primary"
         >Additional Resources</a>
       </div>
-      <div class="category-card">
+      <div class="tracks-category-card">
         <h4>Discussion</h4>
         <p>Share a tip or ask a question about how others are handling something.</p>
         <a href="/c/discussion/9" class="btn btn-primary">Discussion</a>
