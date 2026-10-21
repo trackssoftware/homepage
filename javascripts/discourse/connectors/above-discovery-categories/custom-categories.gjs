@@ -28,8 +28,12 @@
       </div>
       <div class="tracks-category-card">
         <h4>Tracks Go!</h4>
-        <p>Guides and answers to help you get the most out of Tracks Go!</p>
-        <a href="/c/tracks-go/18" class="btn btn-primary">Tracks Go!</a>
+        <p>The field app for on-the-spot checklists, welfare assessments and
+          water quality.</p>
+        <a
+          href="https://connect.trackssoftware.com/t/tracks-go-overview/9398"
+          class="btn btn-primary"
+        >Tracks Go!</a>
       </div>
       <div class="tracks-category-card">
         <h4>Release Notes</h4>
